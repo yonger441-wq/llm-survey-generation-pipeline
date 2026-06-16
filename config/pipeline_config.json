@@ -1,0 +1,87 @@
+{
+  "paper_pool": "examples/sample_papers.csv",
+  "bib_file": "examples/sample_references.bib",
+  "outline_file": "docs/survey_outline.md",
+  "sections_dir": "2_sections",
+  "output_dir": "4_output",
+  "prompts_dir": "prompts",
+  "reports_dir": "reports",
+  "budget": {
+    "base": 60,
+    "alpha": 10,
+    "beta": 0.05,
+    "min": 60,
+    "max": 180,
+    "target_total": 15000,
+    "phase2_target_total": 17000,
+    "tolerance_pct": 5
+  },
+  "targets": {
+    "unique_cited": 10000,
+    "phase1_unique_cited": 9200,
+    "selected_unique_floor": 11800
+  },
+  "coverage": {
+    "min_draft_rate": 0.85,
+    "target_final_rate": 0.9,
+    "max_supplement_rounds": 4,
+    "supplement_batch_size": 25,
+    "draft_retry_attempts": 2
+  },
+  "llm": {
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "max_retries": 5,
+    "timeout": 420,
+    "rate_limit_rpm": 30,
+    "batch_size": 40,
+    "temperature": 0.2,
+    "max_tokens": 8192
+  },
+  "retrieval": {
+    "overselect_factor": 4,
+    "high_gain_overselect_factor": 5,
+    "year_min": 2018,
+    "year_max": 2026,
+    "meta_chapters": [1, 15]
+  },
+  "injection": {
+    "top_k": 15,
+    "technical_top_k": 5,
+    "meta_top_k": 10,
+    "min_citation_threshold": 50
+  },
+  "selection": {
+    "novelty_quota": {
+      "technical": 0.3,
+      "meta": 0.15
+    },
+    "soft_penalty_at": {
+      "technical": 4,
+      "meta": 6
+    },
+    "hard_cap": {
+      "technical": 8,
+      "meta": 10
+    }
+  },
+  "dedup": {
+    "flag_threshold": 5,
+    "remove_threshold": 8
+  },
+  "growth": {
+    "batch_size": 6,
+    "min_compiled_delta": 80,
+    "high_gain_gap_threshold": 50,
+    "high_gain_selected_threshold": 140,
+    "high_gain_rate_threshold": 0.8,
+    "high_gain_draft_retry_attempts": 3,
+    "high_gain_max_supplement_rounds": 6,
+    "high_gain_supplement_batch_size": 20,
+    "low_coverage_expand_budget_min": 145,
+    "low_coverage_expand_budget_max": 156,
+    "expansion_priority": []
+  }
+}

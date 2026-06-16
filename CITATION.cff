@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: LLM Survey Generation Pipeline
+message: If this repository helps your work, please cite it using this metadata.
+type: software
+authors:
+  - name: Project Maintainers
+version: 0.1.0
+date-released: 2026-06-16
+repository-code: https://github.com/yonger441-wq/llm-survey-generation-pipeline
+abstract: A reproducible pipeline for generating long-form LLM survey drafts from outlines, prompts, references, and chapter-level intermediate outputs.

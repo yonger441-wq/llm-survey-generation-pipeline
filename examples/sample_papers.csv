@@ -1,0 +1,4 @@
+bibkey,title,year,venue,abstract,keywords,citation_count
+vaswani2017attention,Attention Is All You Need,2017,NeurIPS,"Introduces the Transformer architecture and self-attention for sequence modeling.","transformer; attention; sequence modeling",100000
+brown2020language,Language Models are Few-Shot Learners,2020,NeurIPS,"Studies scaling laws and few-shot behavior in large autoregressive language models.","large language models; few-shot learning; scaling",60000
+ouyang2022training,Training Language Models to Follow Instructions with Human Feedback,2022,NeurIPS,"Presents instruction tuning and reinforcement learning from human feedback for aligned assistants.","alignment; instruction tuning; RLHF",30000
